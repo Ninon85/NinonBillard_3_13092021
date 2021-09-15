@@ -1,0 +1,237 @@
+h1, h2, h3, p, li {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+#main-wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+  border-bottom: 2px inset #d5d5d5;
+}
+
+.main-header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 42.5%;
+  max-height: 45%;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  min-height: 335px;
+}
+
+.search__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.search__form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #efefef;
+  height: 50px;
+}
+
+.search__form__container__logo {
+  margin-right: 15px;
+}
+
+.search__form__container .search__form__container__input {
+  border: none;
+  width: 33%;
+  height: 40%;
+  background-color: #efefef;
+}
+
+.search__form__container .search__form__container__submit--hidden {
+  display: none;
+}
+
+.search__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 60%;
+}
+
+.search__container h1, .search__container p {
+  text-align: center;
+}
+
+.search__container__btn {
+  border-radius: 50px/50px;
+  background-color: #9356DC;
+  font-size: 0.80em;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  width: 57.3%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0.25rem;
+  margin-top: 7%;
+  cursor: pointer;
+  -webkit-box-shadow: 0.55em 0.55em 0.55em #d5d5d5;
+          box-shadow: 0.55em 0.55em 0.55em #d5d5d5;
+}
+
+.operation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.operation__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.operation__container ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 0 0 3.625%;
+  height: 265px;
+}
+
+.operation__container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 28%;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  cursor: default;
+  -webkit-transition: background-color 400ms;
+  transition: background-color 400ms;
+  -webkit-box-shadow: 0.55em 0.55em 0.55em #efefef;
+          box-shadow: 0.55em 0.55em 0.55em #efefef;
+}
+
+.operation__container ul li:hover {
+  background-color: #f5edff;
+}
+
+.operation__container ul li:hover .fas {
+  color: #9356DC;
+}
+
+.operation__container ul li span {
+  border-radius: 100%;
+  background-color: #9356DC;
+  width: 7.25%;
+  height: 25px;
+  margin-left: -3.625%;
+  margin-right: 5%;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.25rem;
+}
+
+.operation__container ul li div {
+  margin: 0 5% 0 0;
+}
+
+.operation__container ul li div .fas {
+  -webkit-transition: color 400ms;
+  transition: color 400ms;
+}
+/*# sourceMappingURL=main.css.map */

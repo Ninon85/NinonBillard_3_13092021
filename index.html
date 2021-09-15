@@ -4,35 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google fonts-->
+    <!--shrikhand-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/2cbe9c45f7.js" crossorigin="anonymous"></script>
+    <!--css-->
+    <link rel="stylesheet" href="./sass/main.css">
     <title>ohmyfood</title>
 </head>
 <body>
     <div id="main-wrapper">
-    <header><img src="../images/logo/ohmyfood.png" alt="logo ohmyfood"></header>
+    <header class="main-header">
+        <img  class="main-header__logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood">
+    </header>
     <main>
         <!--section search-->
-        <section>
-            <form method="GET" action="#">
-                <div>
-                    <div></div>
-                    <input type="search" placeholder="Paris, Belleville"/>
-                    <input type="submit" id="submit-search" class="hidden"/>
+        <section class="search">
+            <form class="search__form" name="search__form" method="GET" action="#">
+                <div class="search__form__container">
+                    <div><i class="fas fa-map-marker-alt search__form__container__logo"></i></div>
+                    <input class="search__form__container__input" type="search" placeholder="Paris, Belleville"/>
+                    <input type="submit" id="submit-search" class="search__form__container__submit--hidden"/>
                 </div>
             </form>
-            <div>
-                <h1>Réservez le menu qui vous convient</h1>
-                <p></p>
-                <label for="submit-search">Explorez nos restaurants</label>
+            <div class="search__container">
+                <h1>Réservez le menu qui<br/> vous convient</h1>
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <label class="search__container__btn" for="submit-search">Explorez nos restaurants</label>
             </div>
         </section>
         <!--section operation-->
-        <section>
-            <div>
+        <section class="operation">
+            <div class="operation__container">
                 <h2>Fonctionnement</h2>
                 <ul>
-                    <li><span></span><div></div></li>
-                    <li><span></span><div></div></li>
-                    <li><span></span><div></div></li>
+                    <li><span>1</span><div><i class="fas fa-mobile-alt operation__container__logo"></i></div> Choisissez un restaurant</li>
+                    <li><span>2</span><div><i class="fas fa-list-ul"></i></div> Composez votre menu</li>
+                    <li><span>3</span><div><i class="fas fa-store"></i></div> Dégustez au restaurant</li>
                 </ul>
             </div>
         </section>
@@ -105,8 +121,8 @@
         </section>
     </main>
     <!--footer-->
-    <footer>
-        <div>
+    <footer class="main-footer">
+        <div class="main-footer__container">
             <h3></h3>
             <ul>
                 <li><a href="#"><div></div></a></li>
