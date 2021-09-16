@@ -16,12 +16,10 @@ $breakpoints:(min-tab: 501px,
     max-tab: 800px,
     min-desk: 801px);
 
-$bg-color-section: (
-    search: $color-fifth,
+$bg-color-section: (search: $color-fifth,
     operation: $color-seventh,
-    restaurants:$color-fifth
-);
-    
+    restaurants:$color-fifth);
+
 //functions
 @function padding($nb) {
     $padding: $nb * 0.25;
@@ -47,7 +45,7 @@ $bg-color-section: (
     text-align: center;
     padding: padding(1) + rem;
     cursor: pointer;
-    @include box-shadow ;
+    @include box-shadow;
 }
 
 @mixin box-shadow($color:$color-quaternary, $size-x:$shadow-size-x, $size-y:$shadow-size-y) {
@@ -81,6 +79,7 @@ $bg-color-section: (
     height: 92%;
     width: 100%;
 }
+
 @mixin li-list-style {
     display: flex;
     justify-content: flex-start;
@@ -90,9 +89,10 @@ $bg-color-section: (
     background-color: $color-fifth;
     border-radius: 25px;
     cursor: default;
-    @include box-shadow;                                    
-    
+    @include box-shadow;
+
 }
+
 //media queries
 @mixin tablette-only {
     @media screen and (min-width: map-get($map: breakpoints, $key: min-tab)) and (max-width: map-get($map: breakpoints, $key: max-tab)) {
@@ -142,6 +142,9 @@ body {
     width: 57.3%;
     @include btn;
 
+}
+.submit--hidden {
+    display: none;
 }
 
 //layout
@@ -193,12 +196,10 @@ body {
                 @include light-color;
             }
 
-            .search__form__container__submit--hidden {
-                display: none;
-            }
+            
         }
     }
-
+    
     &__container {
         display: flex;
         flex-direction: column;
@@ -206,7 +207,7 @@ body {
         align-items: center;
         width: 80%;
         height: 60%;
-        margin-top: 7%;//
+        margin-top: 7%; //
 
         h1,
         p {
@@ -223,7 +224,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: map-get($map: $bg-color-section, $key: operation );
+    background-color: map-get($map: $bg-color-section, $key: operation);
     height: 400px;
     @include padding;
 
@@ -236,12 +237,11 @@ body {
         ul {
             @include list-style;
             padding: 0 0 0 3.625%;
-            
+
 
             li {
                 @include li-list-style;
                 transition: background-color 400ms;
-                
 
                 &:hover {
                     background-color: $color-sixth;
@@ -270,7 +270,7 @@ body {
 }
 
 .restaurants {
-    background-color: map-get($map: $bg-color-section, $key: restaurants );
+    background-color: map-get($map: $bg-color-section, $key: restaurants);
     @include padding;
     width: 100%;
     height: 1225px;
@@ -306,7 +306,8 @@ body {
                 @include box-shadow;
 
                 &__pic-container {
-                    display: flex;
+                    display: block;
+                    position: relative;
                     height: 70%;
                     width: 100%;
 
@@ -315,8 +316,24 @@ body {
                         width: 100%;
                         height: 100%;
                         border-radius: 20px 20px 0 0;
+                        position: relative;
+                        
                     }
+                &__new{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: 3.54%;
+                    top: 8.6%;
+                    width: 22%;
+                    padding: padding(1) + rem;
+                    border-radius: 3px;
+                    color: darken($color-tertiary,38%);
+                    background-color: $color-tertiary;
+                    
 
+                }
                 }
 
                 &__container-info {
@@ -325,7 +342,8 @@ body {
                     align-items: center;
                     @include padding;
                     height: 30%;
-                    .fa-heart{
+
+                    .fa-heart {
                         font-size: 1.5rem;
                     }
 
@@ -334,4 +352,8 @@ body {
 
         }
     }
+}
+.main-footer{
+    @include padding;
+
 }

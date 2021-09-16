@@ -32,7 +32,7 @@
                 <div class="search__form__container">
                     <div><i class="fas fa-map-marker-alt search__form__container__logo"></i></div>
                     <input class="search__form__container__input" type="search" placeholder="Paris, Belleville"/>
-                    <input type="submit" id="submit-search" class="search__form__container__submit--hidden"/>
+                    <input type="submit" id="submit-search" class="submit--hidden"/>
                 </div>
             </form>
             <div class="search__container">
@@ -58,11 +58,13 @@
             <div class="restaurants__container">
                 <h2>Restaurants</h2>
                 <!--restaurants-cards-->
+                <form method="GET" action="#"></form>
                 <div class="restaurants__container__cards">
                     <!--restau 1-->
                     <a  class="restaurants__container__cards__link" href="#">
                         <div class="restaurants__container__cards__link__pic-container">
                             <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo la palette du goût">
+                            <span class="restaurants__container__cards__link__pic-container__new">Nouveau</span>
                         </div>
                         <div class="restaurants__container__cards__link__container-info">
                             <div>
@@ -70,7 +72,7 @@
                                 <p>Ménilmontant</p>
                             </div>
                             <div>
-                                <i class="far fa-heart"></i>
+                                <input class="submit--hidden" type="submit" name="restau1" id="restau1"><label for="restau1"><i class="far fa-heart"></i></label>
                             </div>
                         </div>
                     </a>
@@ -78,6 +80,7 @@
                     <a class="restaurants__container__cards__link" href="#">
                         <div class="restaurants__container__cards__link__pic-container">
                             <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo la note enchantée">
+                            <span class="restaurants__container__cards__link__pic-container__new">Nouveau</span>
                         </div>
                         <div class="restaurants__container__cards__link__container-info">
                             <div>
@@ -85,7 +88,7 @@
                                 <p>Charonne</p>
                             </div>
                             <div>
-                                <i class="far fa-heart"></i>
+                                <input class="submit--hidden" type="submit" name="restau2" id="restau2"><label for="restau2"><i class="far fa-heart"></i></label>
                             </div>
                         </div>
                     </a>
@@ -93,6 +96,7 @@
                     <a class="restaurants__container__cards__link" href="#">
                         <div class="restaurants__container__cards__link__pic-container">
                             <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo à la française">
+                            <span class="restaurants__container__cards__link__pic-container__new">Nouveau</span>
                         </div>
                         <div class="restaurants__container__cards__link__container-info">
                             <div>
@@ -100,7 +104,7 @@
                                 <p>Cité rouge</p>
                             </div>
                             <div>
-                                <i class="far fa-heart"></i>
+                                <input class="submit--hidden" type="submit" name="restau3" id="restau3"><label for="restau3"><i class="far fa-heart"></i></label>
                             </div>
                         </div>
                     </a>
@@ -108,6 +112,7 @@
                     <a  class="restaurants__container__cards__link" href="#">
                         <div class="restaurants__container__cards__link__pic-container">
                             <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo le délice des sens">
+                            <span class="restaurants__container__cards__link__pic-container__new">Nouveau</span>
                         </div>
                         <div class="restaurants__container__cards__link__container-info">
                             <div>
@@ -115,7 +120,7 @@
                                 <p>Folie-Méricourt</p>
                             </div>
                             <div>
-                                <i class="far fa-heart"></i>
+                                <input class="submit--hidden" type="submit" name="restau4" id="restau4"><label for="restau4"><i class="far fa-heart"></i></label>
                             </div>
                         </div>
                     </a>
@@ -127,10 +132,10 @@
     <!--footer-->
     <footer class="main-footer">
         <div class="main-footer__container">
-            <h3></h3>
+            <h3>ohmyfood</h3>
             <ul>
-                <li><a href="#"><div></div></a></li>
-                <li><a href="#"><div></div></a></li>
+                <li><a href="#"><div><i class="fas fa-utensils"></i></div></a></li>
+                <li><a href="#"><div><i class="fas fa-hands-helping"></i></div></a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
             </ul>
