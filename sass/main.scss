@@ -7,6 +7,7 @@ $color-quaternary: #d5d5d5;
 $color-fifth:#f6f6f6;
 $color-sixth: #f5edff;
 $color-seventh: #ffffff;
+$color-heighth: #353535;
 $shadow-size-x: .27em;
 $shadow-size-y: .55em;
 
@@ -18,7 +19,9 @@ $breakpoints:(min-tab: 501px,
 
 $bg-color-section: (search: $color-fifth,
     operation: $color-seventh,
-    restaurants:$color-fifth);
+    restaurants:$color-fifth,
+    footer:$color-heighth);
+
 
 //functions
 @function padding($nb) {
@@ -143,6 +146,7 @@ body {
     @include btn;
 
 }
+
 .submit--hidden {
     display: none;
 }
@@ -196,10 +200,10 @@ body {
                 @include light-color;
             }
 
-            
+
         }
     }
-    
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -269,6 +273,7 @@ body {
     }
 }
 
+
 .restaurants {
     background-color: map-get($map: $bg-color-section, $key: restaurants);
     @include padding;
@@ -283,77 +288,151 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        height: 90%;
+        height: 95%;
         width: 100%;
 
-        &__cards {
+        &__checkbox {
+            display: flex;
+            height: 95%;
+            width: 100%;
+            & .checkbox__container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            
+        }
+    }
+}
+
+
+.link-container{
+    display: flex;
+   width: 100%;
+   height: 23%;
+   @include box-shadow;
+   background-color: $color-seventh;
+   border-radius: 20px;
+   position: relative;
+   
+
+   &__card{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       height: 100%;
+       text-decoration: none;
+       color: #000000;
+       &__pic-container{
+           display: flex;
+           width: 100%;
+           height: 70%;
+           position: relative;
+           & img{
+               object-fit: cover;
+               width: 100%;
+               height: 100%;
+               border-radius: 20px 20px 0 0;
+           }
+           &__new{   
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 3.54%;
+            top: 8.6%;
+            width: 22%;
+            padding: padding(1) + rem;
+            border-radius: 3px;
+            color: darken($color-tertiary, 38%);
+            background-color: $color-tertiary;
+
+
+
+           }
+       }
+       &__info-container{
+           display: flex;
+           align-items: center;
+           width: 100%;
+           height: 30%;
+           @include padding;
+           
+       }
+   }
+   &__input{
+       position: absolute;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       bottom: 33px;
+       right: 25px;
+       & .fa-heart{
+           font-size: 1.5rem;
+       }
+
+   }
+}
+    
+
+
+
+
+
+
+
+.main-footer {
+    @include padding;
+    background-color: map-get($map: $bg-color-section, $key: footer);
+    height: 200px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+
+        &__title {
+            color: $color-seventh;
+            font-family: 'Shrikhand', cursive;
+        }
+
+        &__list {
+            list-style-type: none;
+            padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            height: 95%;
+            height: 50%;
             width: 100%;
 
-            &__link {
-                width: 100%;
-                height: 23%;
+            &__item {
                 display: flex;
-                flex-direction: column;
-                background-color: $color-seventh;
-                border-radius: 20px;
-                text-decoration: none;
-                color: #000000;
-                @include box-shadow;
 
-                &__pic-container {
-                    display: block;
-                    position: relative;
-                    height: 70%;
+                width: 100%;
+
+                a {
+                    display: flex;
+                    justify-content: flex-start;
+                    text-decoration: none;
+                    color: $color-seventh;
                     width: 100%;
 
-                    & img {
-                        object-fit: cover;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 20px 20px 0 0;
-                        position: relative;
-                        
-                    }
-                &__new{
-                    position: absolute;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    right: 3.54%;
-                    top: 8.6%;
-                    width: 22%;
-                    padding: padding(1) + rem;
-                    border-radius: 3px;
-                    color: darken($color-tertiary,38%);
-                    background-color: $color-tertiary;
-                    
+                    .main-footer__container__list__item__logo-container {
+                        margin-right: 2.72%;
+                        width: 4%;
 
-                }
-                }
-
-                &__container-info {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    @include padding;
-                    height: 30%;
-
-                    .fa-heart {
-                        font-size: 1.5rem;
+                        .fa-hands-helping {
+                            font-size: 0.75rem;
+                        }
                     }
 
                 }
             }
-
         }
     }
-}
-.main-footer{
-    @include padding;
-
 }
