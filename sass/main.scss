@@ -1,5 +1,7 @@
 //utils
 //variables
+@import 'scss/variables';
+@import "scss/fontawesome";
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
@@ -37,7 +39,7 @@ $bg-color-section: (search: $color-fifth,
 
 @mixin btn {
     border-radius: 50px/50px;
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    @include diagonal-linear-gradient;
     font-size: 0.80em;
     font-family: 'Roboto', sans-serif;
     color: $color-seventh;
@@ -49,6 +51,27 @@ $bg-color-section: (search: $color-fifth,
     padding: padding(1) + rem;
     cursor: pointer;
     @include box-shadow;
+}
+
+@mixin btn-hover {
+    @include diagonal-linear-gradient($color-top:lighten($color-secondary, 10%), $color-bottom:lighten($color-primary, 10%));
+    @include box-shadow($color:darken($color-quaternary, 15%));
+}
+
+@mixin diagonal-linear-gradient($color-top:$color-secondary, $color-bottom:$color-primary) {
+    background: linear-gradient(to bottom right, $color-top, $color-bottom);
+}
+
+@mixin heart-linear-gradient($color-top:$color-secondary, $color-bottom:$color-primary) {
+    font-family: "Font Awesome 5 free";
+    content: "\f004";
+    font-weight: 900;
+    color: transparent;
+    background: linear-gradient(to top, $color-top, $color-bottom);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition-duration: 500ms;
+    transition-delay: 10ms;
 }
 
 @mixin box-shadow($color:$color-quaternary, $size-x:$shadow-size-x, $size-y:$shadow-size-y) {
@@ -63,11 +86,14 @@ $bg-color-section: (search: $color-fifth,
 }
 
 @mixin circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100%;
     background-color: $color-primary;
-    width: 7.25%;
+    width: 25px;
     height: 25px;
-    margin-left: -3.625%;
+    margin-left: -12.5px;
     margin-right: 5%;
     text-align: center;
     color: $color-seventh;
@@ -141,9 +167,13 @@ body {
 
 //components
 .search__container__btn {
-    //margin-top: 7%;
     width: 57.3%;
     @include btn;
+
+    &:hover {
+        @include btn-hover;
+    }
+
 
 }
 
@@ -174,6 +204,7 @@ body {
     align-items: center;
     background-color: map-get($bg-color-section, search);
     height: 335px;
+
 
     &__form {
         display: flex;
@@ -211,7 +242,7 @@ body {
         align-items: center;
         width: 80%;
         height: 60%;
-        margin-top: 7%; //
+        margin-top: 7%;
 
         h1,
         p {
@@ -222,6 +253,59 @@ body {
 }
 
 //footer
+.main-footer {
+    @include padding;
+    background-color: map-get($map: $bg-color-section, $key: footer);
+    height: 200px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+
+        &__title {
+            color: $color-seventh;
+            font-family: 'Shrikhand', cursive;
+            font-weight: normal;
+        }
+
+        &__list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 50%;
+            width: 100%;
+
+            &__item {
+                display: flex;
+
+                width: 100%;
+
+                a {
+                    display: flex;
+                    justify-content: flex-start;
+                    text-decoration: none;
+                    color: $color-seventh;
+                    width: 100%;
+
+                    .main-footer__container__list__item__logo-container {
+                        margin-right: 15px;
+                        width: 4%;
+
+                        .fa-hands-helping {
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
 
 //pages
 .operation {
@@ -240,12 +324,12 @@ body {
 
         ul {
             @include list-style;
-            padding: 0 0 0 3.625%;
+            padding: 0 0 0 12.5px;
 
 
             li {
                 @include li-list-style;
-                transition: background-color 400ms;
+                transition: 400ms;
 
                 &:hover {
                     background-color: $color-sixth;
@@ -295,7 +379,8 @@ body {
             display: flex;
             height: 95%;
             width: 100%;
-            & .checkbox__container{
+
+            & .checkbox__container {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -303,136 +388,110 @@ body {
                 width: 100%;
                 height: 100%;
             }
-            
+
         }
     }
 }
 
 
-.link-container{
+.link-container {
     display: flex;
-   width: 100%;
-   height: 23%;
-   @include box-shadow;
-   background-color: $color-seventh;
-   border-radius: 20px;
-   position: relative;
-   
-
-   &__card{
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-       height: 100%;
-       text-decoration: none;
-       color: #000000;
-       &__pic-container{
-           display: flex;
-           width: 100%;
-           height: 70%;
-           position: relative;
-           & img{
-               object-fit: cover;
-               width: 100%;
-               height: 100%;
-               border-radius: 20px 20px 0 0;
-           }
-           &__new{   
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            right: 3.54%;
-            top: 8.6%;
-            width: 22%;
-            padding: padding(1) + rem;
-            border-radius: 3px;
-            color: darken($color-tertiary, 38%);
-            background-color: $color-tertiary;
+    width: 100%;
+    height: 23%;
+    @include box-shadow;
+    background-color: $color-seventh;
+    border-radius: 20px;
+    position: relative;
 
 
-
-           }
-       }
-       &__info-container{
-           display: flex;
-           align-items: center;
-           width: 100%;
-           height: 30%;
-           @include padding;
-           
-       }
-   }
-   &__input{
-       position: absolute;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       bottom: 33px;
-       right: 25px;
-       & .fa-heart{
-           font-size: 1.5rem;
-       }
-
-   }
-}
-    
-
-
-
-
-
-
-
-.main-footer {
-    @include padding;
-    background-color: map-get($map: $bg-color-section, $key: footer);
-    height: 200px;
-
-    &__container {
+    &__card {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        width: 100%;
         height: 100%;
+        text-decoration: none;
+        color: #000000;
 
-        &__title {
-            color: $color-seventh;
-            font-family: 'Shrikhand', cursive;
+        &__pic-container {
+            display: flex;
+            width: 100%;
+            height: 70%;
+            position: relative;
+
+            & img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px 20px 0 0;
+            }
+
+            &__new {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                right: 3.54%;
+                top: 8.6%;
+                width: 22vmin;
+                padding: padding(1) + rem;
+                border-radius: 3px;
+                color: darken($color-tertiary, 38%);
+                background-color: $color-tertiary;
+
+
+
+            }
         }
 
-        &__list {
-            list-style-type: none;
-            padding: 0;
+        &__info-container {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 50%;
+            align-items: center;
             width: 100%;
+            height: 30%;
+            @include padding;
 
-            &__item {
+            &__title {
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                height: 95%;
+                width: 60%;
 
-                width: 100%;
-
-                a {
-                    display: flex;
-                    justify-content: flex-start;
-                    text-decoration: none;
-                    color: $color-seventh;
-                    width: 100%;
-
-                    .main-footer__container__list__item__logo-container {
-                        margin-right: 2.72%;
-                        width: 4%;
-
-                        .fa-hands-helping {
-                            font-size: 0.75rem;
-                        }
-                    }
+                & h3,
+                p {
+                    margin: 0.2rem;
 
                 }
             }
+
         }
     }
+
+    &__input {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 10%;
+        right: 5%;
+        width: 50px;
+
+        & input+label::before {
+            cursor: pointer;
+            font-family: "Font Awesome 5 Free";
+            content: "\f004";
+            font-weight: 200;
+            font-size: 1.5em;
+        }
+
+        & input:checked+label::before {
+
+            @include heart-linear-gradient;
+        }
+
+
+    }
+
+
 }
