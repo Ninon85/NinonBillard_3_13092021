@@ -6879,6 +6879,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1000;
   }
 }
 
@@ -6891,6 +6892,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1000;
   }
 }
 /*# sourceMappingURL=main.css.map */
