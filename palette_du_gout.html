@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google fonts-->
+    <!--shrikhand-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/2cbe9c45f7.js" crossorigin="anonymous"></script>
+    <!--css-->
+    <link rel="stylesheet" href="./sass/menu.css">
+    <title>La palette du goût</title>
+</head>
+<body>
+    <div id="main-wrapper">
+         <!--header-->
+         <header class="main-header">
+             <a class="main-header_arrow" href="index.html"><i class="fas fa-arrow-left"></i></a>
+            <img class="main-header__logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood">
+        </header>
+        <main>
+            <div><img src="" alt=""></div>
+            <!--main section-->
+            <section>
+                <h1>La Palette du goût</h1>
+                <form action="#" method="get">
+                    <div>
+
+                        <input class="submit--hidden" type="checkbox" name="palette-du-gout"
+                        id="palette-du-gout" />
+                        <label for="palette-du-gout"></label>
+               
+                    </div>
+                </form>
+                <!--FORMULAIRE DES PLATS-->
+                <form method="POST" action="#">
+                    <div>
+                      <!--ENTREES-->  
+                    <section>
+                        <h3>ENTRÉES</h3>
+                        <ul>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="escargot" id="escargot">
+                                    <label for="escargot"></label>
+                                </div>
+                            </li>
+                            <li>
+                                 <h2></h2>
+                                <p></p>
+                                <div class="price">
+                                    
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="foie-gras" id="foie-gras">
+                                    <label for="foie-gras"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+                                    
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="oeuf" id="oeuf">
+                                    <label for="oeuf"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!--PLATS-->
+                    <section>
+                        <h3>PLATS</h3>
+                        <ul>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="filet-de-boeuf" id="filet-de-boeuf">
+                                    <label for="filet-de-boeuf"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="parmentier" id="parmentier">
+                                    <label for="parmentier"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="turbot" id="turbot">
+                                    <label for="turbot"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!--DESSERTS-->
+                    <section>
+                        <h3>DESSERTS</h3>
+                        <ul>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="paris-brest" id="paris-brest">
+                                    <label for="paris-brest"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="macarons" id="macarons">
+                                    <label for="macarons"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <h2></h2>
+                                <p></p>
+                                <div class="price">
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="mousse-choco" id="mousse-choco">
+                                    <label for="mousse-choco"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <input type="submit" id="submit-choice" class="submit-choice" value="Commander" />
+                    </div>
+                </form>
+            </section>
+
+        </main>
+         <!--footer-->
+         <footer class="main-footer">
+            <div class="main-footer__container">
+                <h3 class="main-footer__container__title">ohmyfood</h3>
+                <ul class="main-footer__container__list">
+                    <li class="main-footer__container__list__item"><a href="#">
+                            <div class="main-footer__container__list__item__logo-container"><i
+                                    class="fas fa-utensils"></i></div>Proposer un restaurant
+                        </a></li>
+                    <li class="main-footer__container__list__item"><a href="#">
+                            <div class="main-footer__container__list__item__logo-container"><i
+                                    class="fas fa-hands-helping"></i></div>Devenir partenaire
+                        </a></li>
+                    <li class="main-footer__container__list__item"><a href="#">Mentions légales</a></li>
+                    <li class="main-footer__container__list__item"><a href="mailto:adressemail@mail.com">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

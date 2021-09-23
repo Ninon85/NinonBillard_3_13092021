@@ -1,0 +1,21 @@
+//utils
+//variables
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-quaternary: #d5d5d5;
+$color-fifth:#f6f6f6;
+$color-sixth: #f5edff;
+$color-seventh: #ffffff;
+$color-heighth: #353535;
+$shadow-size-x: .27em;
+$shadow-size-y: .55em;
+//maps
+$breakpoints:(min-tab: 501px,
+    max-tab: 800px,
+    min-desk: 801px);
+
+$bg-color-section: (search: $color-fifth,
+    operation: $color-seventh,
+    restaurants:$color-fifth,
+    footer:$color-heighth);

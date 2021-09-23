@@ -1,0 +1,5 @@
+//functions
+@function padding($nb) {
+    $padding: $nb * 0.25;
+    @return $padding;
+}

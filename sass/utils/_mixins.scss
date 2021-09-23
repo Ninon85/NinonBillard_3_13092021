@@ -1,0 +1,120 @@
+//mixins
+
+@mixin light-color ($color: $color-quaternary) {
+    background-color: lighten($color, 10%);
+}
+
+@mixin btn {
+    max-width: 226px;
+    z-index: 1;
+    border-radius: 50px/50px;
+    @include diagonal-linear-gradient;
+    font-family: 'Roboto', sans-serif;
+    color: $color-seventh;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: padding(4) + rem;
+    cursor: pointer;
+    @include box-shadow;
+    font-size: 1rem;
+}
+
+@mixin btn-hover {
+    @include diagonal-linear-gradient($color-top:lighten($color-secondary, 10%), $color-bottom:lighten($color-primary, 10%));
+    @include box-shadow($color:darken($color-quaternary, 15%));
+    border-radius: 50px/50px
+}
+
+@mixin diagonal-linear-gradient($color-top:$color-secondary, $color-bottom:$color-primary) {
+    background: linear-gradient(to bottom right, $color-top, $color-bottom);
+}
+
+@mixin heart-linear-gradient($color-top:$color-secondary, $color-bottom:$color-primary) {
+    font-family: "Font Awesome 5 free";
+    content: "\f004";
+    font-weight: 900;
+    color: transparent;
+    background: linear-gradient(to top, $color-top, $color-bottom);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition-duration: 500ms;
+    transition-delay: 10ms;
+}
+
+@mixin box-shadow($color:$color-quaternary, $size-x:$shadow-size-x, $size-y:$shadow-size-y) {
+
+    box-shadow: $size-x $size-y $size-y $color;
+}
+
+@mixin padding {
+    padding-left: 4%;
+    padding-right: 4%;
+
+}
+@mixin pseudoelmt-position {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;                
+}
+
+@mixin circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: $color-primary;
+    width: 25px;
+    height: 25px;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: $color-seventh;
+}
+
+@mixin list-style {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:80%;
+    width: 100%;
+    margin: 0;
+    font-weight: bold;
+    
+}
+
+@mixin li-list-style {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 28%;
+    width: 100%;
+    background-color: $color-fifth;
+    border-radius: 25px;
+    cursor: default;
+    @include box-shadow;
+
+}
+
+//media queries
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, min-tab)) and (max-width: map-get($breakpoints, max-tab)) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, min-desk)) {
+        @content;
+    }
+}

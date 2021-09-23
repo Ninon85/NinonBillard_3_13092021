@@ -1,0 +1,33 @@
+//base
+h1,
+h2,
+h3, li, p, span {
+    //font-family: 'Shrikhand', cursive;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+p,
+li {
+    font-size: 16px;
+}
+
+
+h1 {
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+    margin: 0;
+    background-color: $color-seventh;
+}
+
+#main-wrapper {
+    width: 100%;
+    margin: auto;
+}

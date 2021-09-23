@@ -1,0 +1,13 @@
+.submit--hidden+label::before {
+    cursor: pointer;
+    font-family: "Font Awesome 5 Free";
+    content: "\f004";
+    font-weight: 200;
+    font-size: 1.5em;
+}
+
+//& input
+.submit--hidden:checked+label::before {
+
+    @include heart-linear-gradient;
+}
