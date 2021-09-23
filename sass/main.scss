@@ -1,7 +1,17 @@
+
+@import 'font-awesome/variables';
+@import "font-awesome/fontawesome";
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./base/styleBase";
+@import "./components/btn";
+@import "./layout/header";
+@import "./layout/footer";
+@import"./pages";
+
 //utils
 //variables
-@import 'scss/variables';
-@import "scss/fontawesome";
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
@@ -38,9 +48,11 @@ $bg-color-section: (search: $color-fifth,
 }
 
 @mixin btn {
+    width: 226px;
+    z-index: 1;
     border-radius: 50px/50px;
     @include diagonal-linear-gradient;
-    font-size: 0.80em;
+    //font-size: 0.80em;
     font-family: 'Roboto', sans-serif;
     color: $color-seventh;
     height: 50px;
@@ -51,11 +63,13 @@ $bg-color-section: (search: $color-fifth,
     padding: padding(1) + rem;
     cursor: pointer;
     @include box-shadow;
+    font-size: 1rem;
 }
 
 @mixin btn-hover {
     @include diagonal-linear-gradient($color-top:lighten($color-secondary, 10%), $color-bottom:lighten($color-primary, 10%));
     @include box-shadow($color:darken($color-quaternary, 15%));
+    border-radius: 50px/50px
 }
 
 @mixin diagonal-linear-gradient($color-top:$color-secondary, $color-bottom:$color-primary) {
@@ -84,6 +98,14 @@ $bg-color-section: (search: $color-fifth,
     padding-right: 4%;
 
 }
+@mixin pseudoelmt-position {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;                
+}
 
 @mixin circle {
     display: flex;
@@ -93,8 +115,11 @@ $bg-color-section: (search: $color-fifth,
     background-color: $color-primary;
     width: 25px;
     height: 25px;
-    margin-left: -12.5px;
-    margin-right: 5%;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
     text-align: center;
     color: $color-seventh;
 }
@@ -171,11 +196,19 @@ body {
 
 //components
 .search__container__btn {
-    width: 57.3%;
+    position: relative;
     @include btn;
-
-    &:hover {
+    &::after{
+        @include  pseudoelmt-position;
+        content: "";
         @include btn-hover;
+        opacity: 0;
+        transition: 400ms;
+    }
+    &:hover {
+        &::after{
+            opacity: 1;
+        }
     }
 
 
@@ -216,6 +249,64 @@ body {
 
 }
 
+
+
+//footer
+.main-footer {
+    @include padding;
+    background-color: map-get($map: $bg-color-section, $key: footer);
+    height: 200px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+
+        &__title {
+            color: $color-seventh;
+            font-family: 'Shrikhand', cursive;
+            font-weight: normal;
+        }
+
+        &__list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 50%;
+            width: 100%;
+
+            &__item {
+                display: flex;
+
+                width: 100%;
+
+                a {
+                    display: flex;
+                    justify-content: flex-start;
+                    text-decoration: none;
+                    color: $color-seventh;
+                    width: 100%;
+
+                    .main-footer__container__list__item__logo-container {
+                        margin-right: 15px;
+                        width: 15px;
+
+                        .fa-hands-helping {
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+//pages
 .search {
     display: flex;
     flex-direction: column;
@@ -278,64 +369,6 @@ body {
 
     }
 }
-
-//footer
-.main-footer {
-    @include padding;
-    background-color: map-get($map: $bg-color-section, $key: footer);
-    height: 200px;
-
-    &__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100%;
-
-        &__title {
-            color: $color-seventh;
-            font-family: 'Shrikhand', cursive;
-            font-weight: normal;
-        }
-
-        &__list {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 50%;
-            width: 100%;
-
-            &__item {
-                display: flex;
-
-                width: 100%;
-
-                a {
-                    display: flex;
-                    justify-content: flex-start;
-                    text-decoration: none;
-                    color: $color-seventh;
-                    width: 100%;
-
-                    .main-footer__container__list__item__logo-container {
-                        margin-right: 15px;
-                        //width: 4%;
-                        width: 15px;
-
-                        .fa-hands-helping {
-                            font-size: 0.75rem;
-                        }
-                    }
-
-                }
-            }
-        }
-    }
-}
-
-//pages
 .operation {
     display: flex;
     justify-content: center;
@@ -361,14 +394,28 @@ body {
             li {
                 @include li-list-style;
                 transition: 400ms;
+                position: relative;//
+                z-index: 1;
+                
 
                 @include desktop-only {
                     width: 30%;
                 }
-
-                &:hover {
+                ::after{
+                    content: "";
+                    @include  pseudoelmt-position;
                     background-color: $color-sixth;
+                    border-radius: 25px;
+                    opacity: 0;
+                    transition: opacity 400ms;
+
                 }
+               &:hover {
+
+                 ::after{
+                     opacity: 1;
+                 }
+               }
 
                 &:hover .fas {
                     color: $color-primary;
@@ -377,14 +424,24 @@ body {
                 & span {
                     @include circle;
                     padding: padding(1) + rem;
+                    z-index: 1;
+                    &::after{
+                        content: "";
+                        @include  pseudoelmt-position;
+                        background-color: $color-primary;
+                        z-index: -1;
+                        opacity: 0;
+                    }
+                    
                 }
 
                 div {
-                    margin: 0 5% 0 0;
-
+                    margin: 0 5% 0 10%;
                     & .fas {
                         transition: color 400ms;
                     }
+                   
+                   
                 }
 
             }
