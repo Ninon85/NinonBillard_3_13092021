@@ -6374,7 +6374,7 @@ main {
 }
 
 .form-menu {
-  height: 86%;
+  height: 87%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6426,6 +6426,14 @@ main {
   margin-bottom: 0;
 }
 
+.main-section-note-enchantee {
+  height: 1275px;
+}
+
+.starter-note-enchantee {
+  height: 32.5%;
+}
+
 .menu-list {
   list-style-type: none;
   display: -webkit-box;
@@ -6435,13 +6443,13 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80%;
+  height: 87%;
   width: 100%;
   margin: 0;
   font-weight: bold;
@@ -6458,7 +6466,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 28%;
+  height: 60px;
   width: 100%;
   background-color: #f6f6f6;
   border-radius: 25px;
@@ -6469,6 +6477,7 @@ main {
   background-color: #ffffff;
   position: relative;
   overflow-x: hidden;
+  margin-bottom: 13px;
 }
 
 .menu-list .menu-list__check-box--hidden {

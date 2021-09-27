@@ -80,11 +80,11 @@
     color: $color-seventh;
 }
 
-@mixin list-style($height:80%) {
+@mixin list-style($height:80%, $y:space-between) {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: $y;
     align-items: center;
     height: $height;
     width: 100%;
@@ -93,11 +93,11 @@
 
 }
 
-@mixin li-list-style($x: flex-start, $y:center) {
+@mixin li-list-style($x: flex-start, $y:center, $height:28%) {
     display: flex;
     justify-content: $x;
     align-items: $y;
-    height: 28%;
+    height: $height;
     width: 100%;
     background-color: $color-fifth;
     border-radius: 25px;

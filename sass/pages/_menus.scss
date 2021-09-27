@@ -41,7 +41,7 @@ main {
 }
 
 .form-menu {
-    height: 86%;
+    height: 87%;
     width: 100%;
     display: flex;
 
@@ -70,17 +70,28 @@ main {
         margin-bottom: 0
     }
 }
+//La note enchantée
+.main-section-note-enchantee{
+    height: 1275px;
+}
+
+.starter-note-enchantee{
+    height: 32.5%;
+}
+
+/////////////////////
 
 .menu-list {
-    @include list-style;
+    @include list-style(87%,center);
     padding: 0;
 
     li {
-        @include li-list-style(space-between);
+        @include li-list-style(space-between,center, 60px);
         padding-left: 12px;
         background-color: $color-seventh;
         position: relative;
         overflow-x: hidden;
+        margin-bottom: 13px;
     }
 
     .menu-list__check-box--hidden {

@@ -19,20 +19,227 @@
     <script src="https://kit.fontawesome.com/2cbe9c45f7.js" crossorigin="anonymous"></script>
     <!--css-->
     <link rel="stylesheet" href="./sass/menu.css">
-    <title>La note enchantée</title>
+    <title>ohmyfood | La note enchantée</title>
 </head>
+
 <body>
     <div id="main-wrapper">
-         <!--header-->
-         <header class="main-header">
+        <!--header-->
+        <header class="main-header">
             <a class="main-header_arrow" href="index.html"><i class="fas fa-arrow-left"></i></a>
             <img class="main-header__logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood">
         </header>
+        <!--main-->
         <main>
-            
+            <div class="box-picture"><img class="pic" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                    alt="Photo la note enchantée">
+            </div>
+            <!--main section-->
+            <section class="main-section main-section-note-enchantee">
+
+                <h1>La note enchantée</h1>
+                <form class="like" action="#" method="get">
+                    <div>
+
+                        <input class="submit--hidden" type="checkbox" name="note-enchantee" id="note-enchantee" />
+                        <label for="note-enchantee"></label>
+
+                    </div>
+                </form>
+                <!--FORMULAIRE DES PLATS-->
+                <form class="form-menu form-menu-note-enchantee" method="POST" action="#">
+                    <div class="form-menu__container">
+                        <!--ENTREES-->
+                        <section class="starter starter-note-enchantee">
+                            <h3>ENTRÉES</h3>
+                            <span class="underline"></span>
+                            <ul class="menu-list menu-list-starter">
+                                <li>
+
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Ravioles"
+                                        id="Ravioles">
+                                    <label for="Ravioles"></label>
+
+                                    <div class="menu-list__dish">
+                                        <h2>Ravioles de foie gras</h2>
+                                        <p>Accompagnés de leur crème à la truffe</p>
+                                    </div>
+
+                                    <div class="price">
+                                        <p>25€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                                <li>
+
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Caviar"
+                                        id="Caviar">
+                                    <label for="Caviar"></label>
+
+
+                                    <div class="menu-list__dish">
+                                        <h2>Caviar osciètre</h2>
+                                        <p>Sur blini à la farine de blé noir</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>35€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                                <li>
+
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Homard"
+                                        id="Homard">
+                                    <label for="Homard"></label>
+
+
+                                    <div class="menu-list__dish">
+                                        <h2>Homard et espuma de potiron</h2>
+                                        <p>Mariné aux zestes d'orange</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>20€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                                <li>
+
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Foie-gras"
+                                        id="Foie-gras">
+                                    <label for="Foie-gras"></label>
+
+
+                                    <div class="menu-list__dish">
+                                        <h2>Foie gras de canard cuit entier</h2>
+                                        <p>Confiture de figue et pain toasté</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>35€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                            </ul>
+                        </section>
+                        <!--PLATS-->
+                        <section class="main-course">
+                            <h3>PLATS</h3>
+                            <span class="underline"></span>
+                            <ul class="menu-list menu-list-main-course">
+                                <li>
+
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Saint-Jacques"
+                                        id="Saint-Jacques">
+                                    <label for="Saint-Jacques"></label>
+
+
+                                    <div class="menu-list__dish">
+                                        <h2>Noix de coquilles Saint-Jacques</h2>
+                                        <p>Sur lit de purée de céleri-rave</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>40€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                                <li>
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Langoustine"
+                                        id="Langoustine">
+                                    <label for="Langoustine"></label>
+
+                                    <div class="menu-list__dish">
+                                        <h2>Langoustine poêlée</h2>
+                                        <p>Purée de patate douce</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>35€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                                <li>
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="queue-de-boeuf"
+                                        id="queue-de-boeuf">
+                                    <label for="queue-de-boeuf"></label>
+
+                                    <div class="menu-list__dish">
+                                        <h2>Mijoté de queue de boeuf</h2>
+                                        <p>Et riz sauvage aux zestes de citron</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>44€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                            </ul>
+                        </section>
+                        <!--DESSERTS-->
+                        <section class="dessert">
+                            <h3>DESSERTS</h3>
+                            <span class="underline"></span>
+                            <ul class="menu-list menu-list-dessert">
+                                <li>
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Macaron"
+                                        id="Macaron">
+                                    <label for="Macaron"></label>
+
+                                    <div class="menu-list__dish">
+                                        <h2>Macaron noisette et chocolat</h2>
+                                        <p>Glace au caramel brun et sel de Guérande</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>18€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                                <li>
+
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Baba" id="Baba">
+                                    <label for="Baba"></label>
+
+                                    <div class="menu-list__dish">
+                                        <h2>Baba au rhum revisité </h2>
+                                        <p>Avec son coulis de citron</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>22€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                                <li>
+                                    <input class="menu-list__check-box--hidden" type="checkbox" name="Tarte-citron"
+                                        id="Tarte-citron">
+                                    <label for="Tarte-citron"></label>
+
+                                    <div class="menu-list__dish">
+                                        <h2>Tarte au citron meringuée </h2>
+                                        <p>Déstructurée</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>23€</p>
+                                    </div>
+
+                                    <div class="menu-list__animation"></div>
+                                </li>
+                            </ul>
+                        </section>
+                        <input type="submit" id="submit-choice" class="submit-choice submit-choice-hidden "
+                            value="Commander" />
+                        <label for="submit-choice" class="submit-choice-label">Commander</label>
+                    </div>
+                </form>
+            </section>
+
         </main>
-         <!--footer-->
-         <footer class="main-footer">
+        <!--footer-->
+        <footer class="main-footer">
             <div class="main-footer__container">
                 <h3 class="main-footer__container__title">ohmyfood</h3>
                 <ul class="main-footer__container__list">
@@ -52,4 +259,5 @@
         </footer>
     </div>
 </body>
+
 </html>
