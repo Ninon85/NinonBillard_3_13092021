@@ -4,8 +4,8 @@
     background-color: lighten($color, 10%);
 }
 
-@mixin btn {
-    max-width: 226px;
+@mixin btn ($width:226px) {
+    max-width: $width;
     z-index: 1;
     border-radius: 50px/50px;
     @include diagonal-linear-gradient;
@@ -54,13 +54,14 @@
     padding-right: 4%;
 
 }
+
 @mixin pseudoelmt-position {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -1;                
+    z-index: -1;
 }
 
 @mixin circle {
@@ -71,32 +72,31 @@
     background-color: $color-primary;
     width: 25px;
     height: 25px;
-    
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: $color-seventh;
 }
 
-@mixin list-style {
+@mixin list-style($height:80%) {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height:80%;
+    height: $height;
     width: 100%;
     margin: 0;
     font-weight: bold;
-    
+
 }
 
-@mixin li-list-style {
+@mixin li-list-style($x: flex-start, $y:center) {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: $x;
+    align-items: $y;
     height: 28%;
     width: 100%;
     background-color: $color-fifth;
