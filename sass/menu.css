@@ -6333,6 +6333,12 @@ main {
   height: 250px;
 }
 
+@media screen and (min-width: 801px) {
+  .box-picture {
+    height: 400px;
+  }
+}
+
 .box-picture .pic {
   width: 100%;
   height: 100%;
@@ -6361,10 +6367,30 @@ main {
   border-radius: 30px 30px 0 0;
 }
 
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .main-section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .main-section {
+    height: auto;
+  }
+}
+
 .main-section h1 {
   margin-top: 40px;
   font-family: 'Shrikhand', cursive;
   font-weight: normal;
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .main-section h1 {
+    margin-right: auto;
+  }
 }
 
 .main-section .like {
@@ -6379,6 +6405,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .form-menu {
+    width: 75%;
+  }
 }
 
 .form-menu__container {
@@ -6397,6 +6429,20 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 801px) {
+  .form-menu__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .starter,
@@ -6426,8 +6472,21 @@ main {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 801px) {
+  .starter, .main-course {
+    width: 45%;
+    height: 32.5%;
+  }
+}
+
 .main-section-note-enchantee {
   height: 1275px;
+}
+
+@media screen and (min-width: 801px) {
+  .main-section-note-enchantee {
+    height: auto;
+  }
 }
 
 .starter-note-enchantee {
@@ -6589,8 +6648,8 @@ main {
           align-items: center;
   position: absolute;
   right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -6626,6 +6685,16 @@ main {
   width: 186px;
   border: none;
   position: relative;
+}
+
+@media screen and (min-width: 801px) {
+  .submit-choice-label {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 }
 
 .submit-choice-label::after {
