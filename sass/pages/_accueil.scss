@@ -325,7 +325,8 @@
     height: 100vh;
     z-index: 1000;
     display: inline-block;
-    position: absolute;
+    position: fixed;
+    inset: 0;
     text-align: center;
     animation: opacity 500ms 2500ms both;
 

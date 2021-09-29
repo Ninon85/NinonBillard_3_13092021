@@ -6109,6 +6109,7 @@ body {
   width: auto;
   margin: 0;
   background-color: #ffffff;
+  position: relative;
 }
 
 #main-wrapper {

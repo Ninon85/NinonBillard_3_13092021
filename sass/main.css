@@ -6109,6 +6109,7 @@ body {
   width: auto;
   margin: 0;
   background-color: #ffffff;
+  position: relative;
 }
 
 #main-wrapper {
@@ -6837,7 +6838,8 @@ body {
   height: 100vh;
   z-index: 1000;
   display: inline-block;
-  position: absolute;
+  position: fixed;
+  inset: 0;
   text-align: center;
   -webkit-animation: opacity 500ms 2500ms both;
           animation: opacity 500ms 2500ms both;
