@@ -6845,6 +6845,15 @@ body {
           animation: opacity 500ms 2500ms both;
 }
 
+.loading-title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 20%;
+  width: 100%;
+}
+
 .loading-title--gradient {
   -webkit-animation: title 1000ms ease-in-out infinite alternate forwards;
           animation: title 1000ms ease-in-out infinite alternate forwards;
@@ -6852,7 +6861,7 @@ body {
           transform-origin: left;
   font-family: 'Shrikhand', cursive;
   opacity: 0;
-  font-size: 5em;
+  font-size: 3.4em;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);

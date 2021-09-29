@@ -331,17 +331,24 @@
     animation: opacity 500ms 2500ms both;
 }
 
-
+.loading-title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    width: 100%;
+}
 .loading-title--gradient{
     animation: title $anim-dur ease-in-out infinite alternate forwards;
     transform-origin: left;
     font-family: 'Shrikhand', cursive;
     opacity: 0;
-    font-size: 5em;
+    font-size: 3.4em;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 20%;
+    
     @for $i from 1 through $num-title {
         &--#{$i}{
             animation-delay: $anim-delay * $i;
