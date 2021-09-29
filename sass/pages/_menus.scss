@@ -254,14 +254,10 @@ main {
     position: relative;
 
     @include desktop-only {
-        //position: absolute;
         left: 50%;
         transform: translateX(-50%);
         margin-bottom: 20px;
         margin-top: 20px;
-        //align-self: flex-end;
-
-
     }
 
     &::after {

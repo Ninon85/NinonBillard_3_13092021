@@ -10,6 +10,10 @@ $color-seventh: #ffffff;
 $color-heighth: #353535;
 $shadow-size-x: .27em;
 $shadow-size-y: .55em;
+//animation loader
+$anim-dur:1000ms;
+$num-title: 3;
+$anim-delay: $anim-dur / $num-title;
 //maps
 $breakpoints:(min-tab: 501px,
     max-tab: 800px,
