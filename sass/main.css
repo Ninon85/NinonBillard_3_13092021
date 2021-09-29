@@ -6225,6 +6225,8 @@ body {
   .main-header__logo {
     width: 42%;
     max-width: 44%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 

@@ -19,6 +19,7 @@
         @include tablette-only {
             width: 42%;
             max-width: 44%;
+            object-fit: contain;
         }
 
         @include desktop-only {
