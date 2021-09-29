@@ -6203,8 +6203,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 65px;
+  width: 100%;
   border-bottom: 2px inset #d5d5d5;
-  position: relative;
 }
 
 @media screen and (min-width: 801px) {
@@ -6231,6 +6231,9 @@ body {
 @media screen and (min-width: 801px) {
   .main-header__logo {
     width: 30%;
+    max-width: 32%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
@@ -6473,7 +6476,8 @@ main {
 }
 
 @media screen and (min-width: 801px) {
-  .starter, .main-course {
+  .starter,
+  .main-course {
     width: 45%;
     height: 32.5%;
   }
@@ -6761,18 +6765,18 @@ main {
 }
 
 .menu-list-starter {
-  -webkit-animation: fadein 2000ms  ease-in-out 1;
-          animation: fadein 2000ms  ease-in-out 1;
+  -webkit-animation: fadein 2000ms ease-in-out 1 both;
+          animation: fadein 2000ms ease-in-out 1 both;
 }
 
 .menu-list-main-course {
-  -webkit-animation: fadein 2000ms 250ms ease-in-out 1;
-          animation: fadein 2000ms 250ms ease-in-out 1;
+  -webkit-animation: fadein 2000ms 250ms ease-in-out 1 both;
+          animation: fadein 2000ms 250ms ease-in-out 1 both;
 }
 
 .menu-list-dessert {
-  -webkit-animation: fadein 2000ms 500ms ease-in-out 1;
-          animation: fadein 2000ms 500ms ease-in-out 1;
+  -webkit-animation: fadein 2000ms 500ms ease-in-out 1 both;
+          animation: fadein 2000ms 500ms ease-in-out 1 both;
 }
 
 @-webkit-keyframes fadein {

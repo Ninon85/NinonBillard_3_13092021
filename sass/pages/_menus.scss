@@ -7,7 +7,8 @@ main {
 .box-picture {
     width: 100%;
     height: 250px;
-    @include desktop-only{
+
+    @include desktop-only {
         height: 400px;
     }
 
@@ -29,20 +30,23 @@ main {
     margin-top: -30px;
     position: relative;
     border-radius: 30px 30px 0 0;
-    @include tablette-only{
+
+    @include tablette-only {
         align-items: center;
     }
-    @include desktop-only{
+
+    @include desktop-only {
         height: auto;
     }
 
-    
+
 
     h1 {
         margin-top: 40px;
         font-family: 'Shrikhand', cursive;
         font-weight: normal;
-        @include tablette-only{
+
+        @include tablette-only {
             margin-right: auto;
         }
     }
@@ -58,10 +62,11 @@ main {
     height: 87%;
     width: 100%;
     display: flex;
-    @include tablette-only{
+
+    @include tablette-only {
         width: 75%;
     }
-    
+
 
     &__container {
         height: 100%;
@@ -70,11 +75,12 @@ main {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        @include desktop-only{
+
+        @include desktop-only {
             flex-direction: row;
-            align-items:flex-start;
+            align-items: flex-start;
             flex-wrap: wrap;
-            
+
         }
     }
 }
@@ -89,42 +95,45 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
 
-   
+
 
     h3 {
         font-weight: normal;
         margin-bottom: 0
     }
 }
-.starter, .main-course{
-    @include desktop-only{
+
+.starter,
+.main-course {
+    @include desktop-only {
         width: 45%;
         height: 32.5%;
     }
 }
 
 //La note enchantée
-.main-section-note-enchantee{
+.main-section-note-enchantee {
     height: 1275px;
-    @include desktop-only{
-        height: auto;//////////////////////////////////////////////////
+
+    @include desktop-only {
+        height: auto; //////////////////////////////////////////////////
     }
 }
 
-.starter-note-enchantee{
+.starter-note-enchantee {
     height: 32.5%;
-    
+
 }
 
 /////////////////////
 
 .menu-list {
-    @include list-style(87%,center);
+    @include list-style(87%, center);
     padding: 0;
-    
+
 
     li {
-        @include li-list-style(space-between,center, 60px);
+        @include li-list-style(space-between, center, 60px);
         padding-left: 12px;
         background-color: $color-seventh;
         position: relative;
@@ -145,7 +154,7 @@ main {
         margin-right: 10px;
         white-space: nowrap;
         overflow: visible;
-       transition: width 1s;
+        transition: width 1s;
 
 
 
@@ -170,7 +179,8 @@ main {
     }
 
 }
-.underline{
+
+.underline {
     display: inline;
     width: 40px;
     height: 1px;
@@ -180,6 +190,7 @@ main {
     margin-top: 8px;
 
 }
+
 .menu-list__check-box--hidden+label {
     position: absolute;
     top: 0;
@@ -230,6 +241,7 @@ main {
     transition: all 1s;
 
 }
+
 // pseudo élément pour un input type submit impossible --> label 
 .submit-choice-hidden {
     display: none;
@@ -240,16 +252,17 @@ main {
     width: 186px;
     border: none;
     position: relative;
-        @include desktop-only{
-            //position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-bottom: 20px;
-            margin-top: 20px;
-            //align-self: flex-end;
-        
-            
-        }
+
+    @include desktop-only {
+        //position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        margin-top: 20px;
+        //align-self: flex-end;
+
+
+    }
 
     &::after {
         content: "";
@@ -287,6 +300,7 @@ main {
 .menu-list li .menu-list__check-box--hidden:checked+label+.menu-list__dish+.price {
     transform: translateX(-150%);
 }
+
 //rotation icone fontawesome
 @keyframes turn {
     from {
@@ -297,16 +311,19 @@ main {
         transform: rotate(1turn);
     }
 }
+
 //Animation apparition prograssive par groupe/entées-plats-desserts
 
-.menu-list-starter{
-    animation: fadein 2000ms  ease-in-out 1;
+.menu-list-starter {
+    animation: fadein 2000ms ease-in-out 1 both;
 }
-.menu-list-main-course{
-    animation: fadein 2000ms 250ms ease-in-out 1;
+
+.menu-list-main-course {
+    animation: fadein 2000ms 250ms ease-in-out 1 both;
 }
-.menu-list-dessert{
-    animation: fadein 2000ms 500ms ease-in-out 1;
+
+.menu-list-dessert {
+    animation: fadein 2000ms 500ms ease-in-out 1 both;
 }
 
 @keyframes fadein {
@@ -314,10 +331,12 @@ main {
         transform: translateY(100%);
         opacity: 0;
     }
-    75%{
+
+    75% {
         opacity: 0.2;
     }
-    100%{
+
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
