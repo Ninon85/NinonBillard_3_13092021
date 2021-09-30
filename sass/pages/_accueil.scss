@@ -332,14 +332,15 @@
     animation: opacity 500ms 2500ms both;
 }
 
-.loading-title{
+.loading-title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 20%;
     width: 100%;
 }
-.loading-title--gradient{
+
+.loading-title--gradient {
     animation: title $anim-dur ease-in-out infinite alternate forwards;
     transform-origin: left;
     font-family: 'Shrikhand', cursive;
@@ -349,61 +350,65 @@
     left: 50%;
     transform: translateX(-50%);
     top: 20%;
-    
+
     @for $i from 1 through $num-title {
-        &--#{$i}{
+        &--#{$i} {
             animation-delay: $anim-delay * $i;
         }
     }
-}  
-.loading-title--gradient--1{
-    background:linear-gradient(100deg,$color-tertiary, 30%,$color-primary,60%, $color-secondary 90%);
+}
+
+.loading-title--gradient--1 {
+    background: linear-gradient(100deg, $color-tertiary, 30%, $color-primary, 60%, $color-secondary 90%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.loading-title--gradient--2{
-    background: linear-gradient(90deg,$color-primary, 30%,$color-tertiary,60%, $color-secondary 100%);
+
+.loading-title--gradient--2 {
+    background: linear-gradient(90deg, $color-primary, 30%, $color-tertiary, 60%, $color-secondary 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.loading-title--gradient--3{
-    background:  linear-gradient(70deg,$color-primary, 30%,$color-secondary,60%, $color-tertiary 90%);
+
+.loading-title--gradient--3 {
+    background: linear-gradient(70deg, $color-primary, 30%, $color-secondary, 60%, $color-tertiary 90%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 @keyframes title {
-    0%{
+    0% {
         opacity: 1;
     }
 
-    100%{
+    100% {
         opacity: 0;
     }
 }
 
-    .ball1 {
-        background-color: $color-primary;
-        margin-right: 2%;
-        animation: travel 800ms 0ms cubic-bezier(.32, 1.16, .6, .5);
-        animation-iteration-count: 3;
+.ball1 {
+    background-color: $color-primary;
+    margin-right: 2%;
+    animation: travel 800ms 0ms cubic-bezier(.32, 1.16, .6, .5);
+    animation-iteration-count: 3;
 
-    }
+}
 
-    .ball2 {
-        background-color: $color-secondary;
-        margin-right: 2%;
-        animation: travel 800ms 500ms cubic-bezier(.32, 1.16, .6, .5);
-        animation-iteration-count: 3;
-    }
+.ball2 {
+    background-color: $color-secondary;
+    margin-right: 2%;
+    animation: travel 800ms 500ms cubic-bezier(.32, 1.16, .6, .5);
+    animation-iteration-count: 3;
+}
 
-    .ball3 {
-        background-color: $color-tertiary;
-        animation: travel 800ms 1000ms cubic-bezier(.32, 1.16, .6, .5);
-        animation-iteration-count: 3;
-    }
+.ball3 {
+    background-color: $color-tertiary;
+    animation: travel 800ms 1000ms cubic-bezier(.32, 1.16, .6, .5);
+    animation-iteration-count: 3;
+}
 
 
 

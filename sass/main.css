@@ -1,6 +1,9 @@
 h1,
 h2,
-h3, li, p, span {
+h3,
+li,
+p,
+span {
   font-family: 'Roboto', sans-serif;
 }
 

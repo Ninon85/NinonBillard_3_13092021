@@ -2,15 +2,17 @@
 .search__container__btn {
     position: relative;
     @include btn;
-    &::after{
-        @include  pseudoelmt-position;
+
+    &::after {
+        @include pseudoelmt-position;
         content: "";
         @include btn-hover;
         opacity: 0;
         transition: 400ms;
     }
+
     &:hover {
-        &::after{
+        &::after {
             opacity: 1;
         }
     }

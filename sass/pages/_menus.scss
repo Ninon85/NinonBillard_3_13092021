@@ -116,7 +116,7 @@ main {
     height: 1275px;
 
     @include desktop-only {
-        height: auto; //////////////////////////////////////////////////
+        height: auto;
     }
 }
 
