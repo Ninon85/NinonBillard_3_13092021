@@ -543,6 +543,10 @@ main {
   transition: all 1s;
   position: absolute;
   right: 10px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .price p {
@@ -688,18 +692,18 @@ main {
 }
 
 .menu-list-starter {
-  -webkit-animation: fadein 2000ms ease-in-out 1 both;
-          animation: fadein 2000ms ease-in-out 1 both;
+  -webkit-animation: fadein 2000ms ease-in-out 1 alternate both;
+          animation: fadein 2000ms ease-in-out 1 alternate both;
 }
 
 .menu-list-main-course {
-  -webkit-animation: fadein 2000ms 250ms ease-in-out 1 both;
-          animation: fadein 2000ms 250ms ease-in-out 1 both;
+  -webkit-animation: fadein 2000ms 250ms ease-in-out 1 alternate both;
+          animation: fadein 2000ms 250ms ease-in-out 1 alternate both;
 }
 
 .menu-list-dessert {
-  -webkit-animation: fadein 2000ms 500ms ease-in-out 1 both;
-          animation: fadein 2000ms 500ms ease-in-out 1 both;
+  -webkit-animation: fadein 2000ms 500ms ease-in-out 1 alternate both;
+          animation: fadein 2000ms 500ms ease-in-out 1 alternate both;
 }
 
 @-webkit-keyframes fadein {

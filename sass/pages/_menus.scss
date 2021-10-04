@@ -12,7 +12,7 @@ main {
         height: 400px;
     }
 
-    & .pic {
+    .pic {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -51,7 +51,7 @@ main {
         }
     }
 
-    & .like {
+    .like {
         position: absolute;
         top: 3.44%;
         right: 3.44%;
@@ -212,13 +212,14 @@ main {
     transition: all 1s;
     position: absolute;
     right: 10px;
+    transition: transform 1s;
     p{
         font-weight: bold;
     }
 }
 
 
-
+//FONT AWESOME ICON
 .menu-list__animation::after {
     content: "\f058";
     font-family: "Font Awesome 5 Free";
@@ -245,7 +246,7 @@ main {
 
 }
 
-// pseudo élément pour un input type submit impossible --> label 
+// pseudo élément FOR input type submit impossible --> label 
 .submit-choice-hidden {
     display: none;
 }
@@ -281,7 +282,7 @@ main {
 
 
 
-// Animations à la selection 
+// Animations selection 
 
 .menu-list li .menu-list__check-box--hidden:checked+label+.menu-list__dish+.price+.menu-list__animation {
     transform: translateX(0%);
@@ -289,6 +290,7 @@ main {
 
 .menu-list li .menu-list__check-box--hidden:checked+label+.menu-list__dish+.price+.menu-list__animation::after {
     animation: turn 1000ms alternate both;
+
 }
 
 .menu-list li .menu-list__check-box--hidden:checked+label+.menu-list__dish {
@@ -300,7 +302,7 @@ main {
     transform: translateX(-150%);
 }
 
-//rotation icone fontawesome
+//rotation fontawesome icon
 @keyframes turn {
     from {
         transform: rotate(0deg);
@@ -311,18 +313,18 @@ main {
     }
 }
 
-//Animation apparition prograssive par groupe/entées-plats-desserts
+//Animation FADE IN /entées-plats-desserts
 
 .menu-list-starter {
-    animation: fadein 2000ms ease-in-out 1 both;
+    animation: fadein 2000ms ease-in-out 1 alternate both;
 }
 
 .menu-list-main-course {
-    animation: fadein 2000ms 250ms ease-in-out 1 both;
+    animation: fadein 2000ms 250ms ease-in-out 1 alternate both;
 }
 
 .menu-list-dessert {
-    animation: fadein 2000ms 500ms ease-in-out 1 both;
+    animation: fadein 2000ms 500ms ease-in-out 1 alternate both;
 }
 
 @keyframes fadein {
