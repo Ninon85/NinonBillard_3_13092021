@@ -97,9 +97,10 @@ main {
 
 
 
-    h3 {
-        font-weight:normal;
-        margin-bottom: 0
+    h2 {
+        font-weight:400;
+        margin-bottom: 0;
+        font-size: 1em;
     }
 }
 
@@ -153,19 +154,18 @@ main {
         width: 86%;
         margin-right: 10px;
         white-space: nowrap;
-        //overflow: visible;
         transition: width 1s;
 
 
 
-        h2,
+        h3,
         p {
             margin: 0 0 .3em 0;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        h2 {
+        h3 {
             font-size: 1em;
 
         }
