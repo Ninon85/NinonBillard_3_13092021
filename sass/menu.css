@@ -481,7 +481,6 @@ main {
   width: 86%;
   margin-right: 10px;
   white-space: nowrap;
-  overflow: visible;
   -webkit-transition: width 1s;
   transition: width 1s;
 }
